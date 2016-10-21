@@ -14,5 +14,16 @@ public class SalaCine {
     Coordenada buscarTicket(int numero){
         
     }
+    private static boolean IsPalindromo (String name, int inicio, int fin){
+       if(inicio < fin){
+            if(name.charAt(inicio) == name.charAt(fin))
+                return IsPalindromo(name,inicio+1,fin-1);
+            return false;
+        }
+        return true;
+    }
+    public static boolean IsPalindromo (String name){
+        return IsPalindromo(name,0, name.length()-1);
+    }
     
 }
