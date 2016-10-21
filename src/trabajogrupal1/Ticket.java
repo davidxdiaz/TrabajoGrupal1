@@ -5,10 +5,15 @@
  */
 package trabajogrupal1;
 
+import java.util.Calendar;
+
 /**
  *
  * @author ANDY ESCOBAR 007
  */
 public class Ticket {
+    int idTicket;
+    Calendar fecha=Calendar.getInstance();
+    double precio;
     
 }
