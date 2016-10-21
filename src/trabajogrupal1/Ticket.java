@@ -24,7 +24,9 @@ public class Ticket {
     }
     
     
-    public void println()
+    public void print(){
+        System.out.println("Numero de Ticket: " +getIdTicket()+"  Precio: "+getPrecio()+"  Fecha: "+fecha.getTime());
+    }
 
     public int getIdTicket() {
         return idTicket;
@@ -36,12 +38,5 @@ public class Ticket {
 
     public double getPrecio() {
         return precio;
-    }
-    
-    
-        
-        
-        
-        
     }
 }
