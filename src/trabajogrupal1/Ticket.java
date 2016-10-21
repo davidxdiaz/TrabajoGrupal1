@@ -5,17 +5,15 @@
  */
 package trabajogrupal1;
 
+import java.util.Calendar;
+
 /**
  *
- * @author David
+ * @author ANDY ESCOBAR 007
  */
-public class TrabajoGrupal1 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Ticket {
+    int idTicket;
+    Calendar fecha=Calendar.getInstance();
+    double precio;
     
 }
