@@ -11,8 +11,21 @@ package trabajogrupal1;
  */
 public class SalaCine {
     Ticket asientos[][]= new Ticket[10][30];
-    Coordenada buscarTicket(int numero){
-        
+    int contTicket=0;
+    //Buscar por referencia
+    public Coordenada buscarTicket(int n){
+        return buscarTicket(n,0,0,10);
+    }
+    private Coordenada buscarTicket(int numero,int f,int c,int filas){
+        if(f<filas){
+            if(numero == asientos[f][c].getIdTicket()){
+                Coordenada coor = new Coordenada(f,c);
+                return coor;
+            }
+            return buscarTicket(numero,f+1,c+1,filas);
+                
+        }
+        return null;
     }
     private static boolean IsPalindromo (String name, int inicio, int fin){
        if(inicio < fin){
@@ -24,6 +37,9 @@ public class SalaCine {
     }
     public static boolean IsPalindromo (String name){
         return IsPalindromo(name,0, name.length()-1);
+    }
+    double income(){
+        
     }
     
 }
