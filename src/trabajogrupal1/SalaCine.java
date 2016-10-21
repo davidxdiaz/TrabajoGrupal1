@@ -14,15 +14,21 @@ public class SalaCine {
     int contTicket=0;
     //Buscar por referencia
     public Coordenada buscarTicket(int n){
-        return buscarTicket(n,0,0,10);
+        return buscarTicket(n,0,0,10,30);
     }
-    private Coordenada buscarTicket(int numero,int f,int c,int filas){
+    private Coordenada buscarTicket(int numero,int f,int c,int filas, int columnas){
         if(f<filas){
-            if(numero == asientos[f][c].getIdTicket()){
+            if(c<columnas){
+                if(numero == asientos[f][c].getIdTicket()){
                 Coordenada coor = new Coordenada(f,c);
                 return coor;
+                }
+            return buscarTicket(numero,f,c+1,filas,columnas);
             }
-            return buscarTicket(numero,f+1,c+1,filas);
+            else{
+                return buscarTicket(numero,f+1,0,filas,columnas);
+            }
+            
                 
         }
         return null;
