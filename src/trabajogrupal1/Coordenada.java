@@ -9,13 +9,7 @@ package trabajogrupal1;
  *
  * @author David
  */
-public class TrabajoGrupal1 {
+public class Coordenada {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
 }
