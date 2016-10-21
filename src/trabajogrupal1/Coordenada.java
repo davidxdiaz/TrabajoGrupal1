@@ -10,6 +10,11 @@ package trabajogrupal1;
  * @author David
  */
 public class Coordenada {
-
+    public int filas;
+    public int columnas;
+    public Coordenada(int filas,int columnas){
+        this.filas = filas;
+        this.columnas = columnas;
+    }
     
 }
