@@ -13,7 +13,37 @@ import java.util.Calendar;
  */
 public class Ticket {
     int idTicket;
-    Calendar fecha=Calendar.getInstance();
+    Calendar fecha;
     double precio;
     
+    public Ticket(int n,double precio){
+        Calendar hoy=Calendar.getInstance();
+        idTicket=n;
+        this.precio=precio;
+        fecha=Calendar.getInstance();
+    }
+    
+    
+    public void print(){
+        System.out.println("N° del Ticket: "+getIdTicket()+"  Precio: "+ getPrecio()+"  Fecha"+ fecha.getTime());
+    }
+
+    public int getIdTicket() {
+        return idTicket;
+    }
+
+    public Calendar getFecha() {
+        return fecha;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+    
+    
+        
+        
+        
+        
 }
+
